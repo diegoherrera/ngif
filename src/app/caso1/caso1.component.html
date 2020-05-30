@@ -1,0 +1,17 @@
+<div style="background: red; height: 300px; width: 100%;">
+    
+    <div *ngIf="admin">
+        <p>caso1 works!</p>
+    </div>
+    <div *ngIf=" a == 10 || b <=5 ">
+        <p>Condicion logica en base a estado de propiedades </p>
+    </div>
+    <div>
+        <input type="checkbox" [(ngModel)]="Varselected" />
+
+        <div *ngIf="Varselected">
+            <p>Contenido en base a estado de controles de la vista </p>
+        </div>
+    </div>
+</div>
+

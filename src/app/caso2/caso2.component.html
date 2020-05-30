@@ -1,0 +1,29 @@
+<p>caso2 works!</p>
+
+<div class="container">
+    <h1>ng if and else</h1>
+
+    <input type="text" class="form-control" 
+    placeholder="ingrese dato" [(ngModel)]="dato">
+    <br>
+    <button type="button" 
+    class="btn btn-primary" *ngIf="dato">Enviar</button>
+    
+    <br>
+    <div *ngIf="dato; else templateCasoContrario">
+        contenido si cumple la condicion
+    </div>
+    <br>
+    <ng-template #templateCasoContrario>
+        contenido si no cumple la condicion
+    </ng-template>
+
+    <div *ngIf="dato; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        Contenido del div para caso si
+    </ng-template>
+    <ng-template #elseBlock>
+        Contenido del div para caso no
+    </ng-template>
+
+</div>
